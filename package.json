@@ -1,0 +1,25 @@
+{
+  "name": "cheatsheets",
+  "version": "1.0.0",
+  "description": "documentation cheatsheet",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uwineza53/cheatsheets.git"
+  },
+  "author": "Joel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uwineza53/cheatsheets/issues"
+  },
+  "homepage": "https://github.com/uwineza53/cheatsheets#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
