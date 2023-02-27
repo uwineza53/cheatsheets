@@ -223,3 +223,31 @@ const { isLoading, data, isFetching } = useQuery(['employee', employeeId], emplo
     },
 })
 ```
+
+13. Paginated Query
+
+```javascript
+const [pageNumber, setPageNumber] = useState(1);
+
+const employeesFetch = async ({ queryKey }) => {
+    const page = queryKey[1];
+    const res = await fetch(`https://jsonplaceholder.ir/users?page_size=2&page=${page}`);
+    return await res.json();
+}
+
+const { isloading, data } = useQuery(['employees', pageNumber], employeesFetch, {
+    keepPreviousData: true,
+})
+
+if(isLoading)
+    return <div style={{ padding: '10px'}}><p> Loading ...</p></div>
+
+return (
+    <div>
+        // TODO: Do html to render data
+        
+        <button onClick={() => setPageNumber(page => page - 1)} disabled={pageNumber === 1}>Preview</button>
+        <button onClick={() => setPageNumber(page => page + 1)} disabled={pageNumber === 4}>Next</button>
+    </div>
+)
+```
