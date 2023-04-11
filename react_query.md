@@ -245,7 +245,7 @@ if(isLoading)
 return (
     <div>
         // TODO: Do html to render data
-        
+
         <button onClick={() => setPageNumber(page => page - 1)} disabled={pageNumber === 1}>Preview</button>
         <button onClick={() => setPageNumber(page => page + 1)} disabled={pageNumber === 4}>Next</button>
     </div>
